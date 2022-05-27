@@ -1,9 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { colors } from './src/theme/colors'
 import { spacing } from './src/theme/spacing';
 import { useFonts } from "expo-font";
 import { typography } from './src/theme/typography';
+import Text from './src/Components/text/text';
+
 
 export default function App() {
   const [loaded] = useFonts({
@@ -19,8 +21,8 @@ export default function App() {
   }
   return (
     <View style={styles.container}>
-      <Text style={{ fontFamily: typography.primaryBold, fontSize: spacing[5] }}>Open up App.js to start working on your app!</Text>
-      <Text style={{ marginTop: spacing[4] }}>Hello World!</Text>
+      <Text preset="h1">Open up App.js to start working on your app!</Text>
+      <Text preset="small" style={{ color: "green" }}>Hello World!</Text>
       <StatusBar style="auto" />
     </View>
   );
@@ -31,5 +33,6 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: "black"
   },
 });
