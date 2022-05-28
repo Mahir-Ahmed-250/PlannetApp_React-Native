@@ -1,4 +1,4 @@
-import { View, Text as RNText, StyleSheet } from 'react-native';
+import { Text as RNText, StyleSheet } from 'react-native';
 import React from 'react';
 import { presets } from './text.preset';
 
