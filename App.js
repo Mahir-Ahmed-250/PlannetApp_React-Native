@@ -1,11 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { useFonts } from "expo-font";
 import Text from './src/Components/text/text';
-import { NavigationContainer, DarkTheme } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { NavigationContainer, DarkTheme } from '@react-navigation/native'; import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Home from './src/screens/home';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import Details from './src/screens/details';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 
 
@@ -25,22 +25,21 @@ export default function App() {
     )
   }
   return (
-    <>
-      <NavigationContainer>
-        <Stack.Navigator screenOptions={{ headerShown: false }}>
+    <SafeAreaProvider style={{ backgroundColor: "black" }}>
+      <NavigationContainer >
+        <Stack.Navigator mode="modal" screenOptions={{ headerShown: false }}>
           <Stack.Screen name="Home" component={Home} />
+          <Stack.Screen name="Details" component={Details} />
         </Stack.Navigator>
       </NavigationContainer>
       <StatusBar style="light" />
-    </>
+    </SafeAreaProvider>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-
   },
+
 });
