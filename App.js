@@ -1,13 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet } from 'react-native';
 import { useFonts } from "expo-font";
 import Text from './src/Components/text/text';
-import { NavigationContainer, DarkTheme } from '@react-navigation/native'; import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Home from './src/screens/home';
 import Details from './src/screens/details';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-
-
 
 
 const Stack = createNativeStackNavigator();
@@ -36,10 +34,3 @@ export default function App() {
     </SafeAreaProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-
-});
