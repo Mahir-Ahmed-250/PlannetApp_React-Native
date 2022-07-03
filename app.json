@@ -21,7 +21,7 @@
       "supportsTablet": true
     },
     "android": {
-      "package": "CodeWithMahir.planetApp",
+      "package": "CodeWithMahir.PlanetApps",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
